@@ -33,12 +33,12 @@ pub fn get_mode (vec: &Vec<i32>) -> i32 {
         }
     }
 
-    let maxMap = mode_count.iter().fold((&0,&0), |left,right| 
+    let max_map = mode_count.iter().fold((&0,&0), |left,right| 
         if left.1 < right.1 {
             right
         } else {
             left
         });
     
-    return *maxMap.0;
+    return *max_map.0;
 }
