@@ -1,5 +1,6 @@
 mod module_a;
 mod list_calc;
+mod latin;
 // use crate::module_a;
 // use module_a;
 
@@ -13,6 +14,11 @@ fn main() {
     println!("{}",list_calc::get_mean(&vec));
     println!("{}",list_calc::get_median(&vec));
     println!("{}",list_calc::get_mode(&vec));
+
+    println!("問題2");
+    println!("{}",latin::to_latin(&String::from("first")));
+    println!("{}",latin::to_latin(&String::from("apple")));
+
 }
 
 mod Module {
