@@ -1,7 +1,11 @@
+mod module_a;
+// use crate::module_a;
+// use module_a;
+
 fn main() {
     println!("Hello, world!");
     println!("{}",Module::Module2::isOdd(10));
-    println!("{}",ModuleA::isEven(10));
+    println!("{}",module_a::isEven(10));
 }
 
 mod Module {
@@ -10,11 +14,5 @@ mod Module {
             return num %2 == 0;
 
         }
-    }
-}
-
-mod ModuleA {
-    pub fn isEven(num :i32) -> bool{
-        return !crate::Module::Module2::isOdd(num)
     }
 }
